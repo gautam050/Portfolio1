@@ -2,6 +2,7 @@ import React from "react";
 import "./header.css";
 
 export default function Header() {
+  
   const handleResumeClick = () => {
     const fileUrl = "/resume/Ashutosh_Singh_Resume.pdf";
 
