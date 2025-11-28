@@ -1,38 +1,45 @@
 import React from "react";
+import "./education.css";
 
 export default function Education() {
+  const educations = [
+    {
+      school: "ITM University ",
+      year: "B.Tech in Computer Science Engineering (2020-2024)",
+      role: "Coordinator, Film Club",
+      description: "Directed and produced theme-based short films promoting Women Empowerment, freedom, and awareness of the Indian constitution. Learned effective communication, collaboration, and adaptability."
+    },
+    {
+      school: "Adarsh Public School",
+      year: "Class XII (2019-2020)",
+      role: "Debate Club Member",
+      description: "Participated in weekly discussions and inter-school debates, honing public speaking and critical thinking skills."
+    },
+    {
+      school: "Delhi Public School",
+      year: "Class X (-2017)",
+      role: "Captain, Inter-school Cricket",
+      description: "Demonstrated leadership and teamwork, achieving victory in an inter-school cricket tournament. Gained appreciation for collaboration and strategic thinking."
+    },
+  ];
+
   return (
     <div className="education" id="education">
       <div className="head">
-        <a href="#"><i className="fas fa-graduation-cap"></i>Education</a>
+        <a href="#"><i className="fas fa-graduation-cap"></i> Education</a>
       </div>
 
-      <div className="textbox">
-        <h2>ITM University</h2>
-        <small>(2020-2024)</small>
-        <p>Coordinator, Film Club : Directed and produced theme-based short films
-           promoting Women Empowerment, freedom, and awareness of the Indian constitution.
-           The experience of producing these films broadened my horizons.
-           It taught me the importance of effective communication, collaboration,
-            and adaptability in managing creative projects. </p>
-      </div>
-
-      <div className="textbox" id="textbox">
-        <h2>Adarsh Public School</h2>
-        <small>(2019-2020)</small>
-        <p>Debate Club : As an active member of the Debate Club, I participated in weekly discussions
-             and formal debates on a wide range of topics. This experience honed my public speaking and
-             critical thinking skills.hrough participating in inter-school debate competitions,
-             I developed the ability to think on my feet and respond eloquently to counterarguments </p>
-      </div>
-
-      <div className="textbox">
-        <h2>Delhi public School</h2>
-        <small>(-2017)</small>
-        <p>
-            Captain, Inter-school  : Demonstrated leadership and teamwork skills in achieving victory in an
-            inter-school cricket tournament.Through this experience, I gained a profound appreciation for the
-            importance of collaboration, strategic thinking, and effective leadership in achieving success. </p>
+      <div className="education-container">
+        {educations.map((edu, index) => (
+          <div
+            key={index}
+            className={`education-box ${index % 2 === 0 ? "left" : "right"}`}
+          >
+            <h3>{edu.school}</h3>
+            <small>({edu.year})</small>
+            <p><strong>{edu.role}:</strong> {edu.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

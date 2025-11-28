@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-
+import "./contact.css";                   
 export default function Contact() {
   const formRef = useRef();
 
@@ -36,7 +36,10 @@ export default function Contact() {
   return (
     <div id="contact" className="contacts">
       <div className="contact">
-        <a href="#"><i className="fa-solid fa-id-card"></i>Contact </a>
+        <a href="#contact" className="contact-heading">
+  <i className="fa-solid fa-id-card" style={{ marginRight: "8px" }}></i>
+  Contact
+</a>
 
         <div id="contact-container">
           <div id="contact-form-container">
@@ -69,34 +72,29 @@ export default function Contact() {
             </div>
           </div>
         </div>
-
-        <div className="text-center social-icons d-flex">
-          <ul className="no-list-style horizontal-list">
-            <li className="bottom-social">
-              <a href="https://www.linkedin.com/in/ashutosh-gautam-aa8797255/">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-
-            <li className="bottom-social">
-              <a href="https://github.com/gautam050" target="_blank" rel="noreferrer">
-                <i className="fab fa-github"></i>
-              </a>
-            </li>
-
-            <li className="bottom-social">
-              <a href="https://www.instagram.com/ashutoshgautam01/">
-                <i className="fab fa-instagram"></i>
-              </a>
-            </li>
-
-            <li className="bottom-social">
-              <a href="mailto:ashutoshgautam055@gmail.com" target="_blank" rel="noreferrer">
-                <i className="fa-solid fa-envelope"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <div className="social-media">
+        <a
+          href="https://www.linkedin.com/in/ashutosh-gautam-aa8797255/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fab fa-linkedin-in"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/ashutoshgautam01/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:ashutoshgautam055@gmail.com">
+          <i className="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://github.com/gautam050" target="_blank" rel="noreferrer">
+          <i className="fab fa-github"></i>
+        </a>
+      </div>
+        
       </div>
     </div>
   );

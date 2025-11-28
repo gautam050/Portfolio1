@@ -1,0 +1,126 @@
+/* Main Section */
+.education {
+  margin: 15px;
+  margin-top: 80px;
+  padding: 40px 20px;
+  min-height: 500px;
+  background: #f3f7ff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Heading */
+.head a {
+  display: inline-block;
+  font-size: 32px;
+  color: #0a3a8d;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 3px solid #0a3a8d;
+  padding-bottom: 5px;
+}
+
+/* Container */
+.education-container {
+  margin-top: 40px;
+  position: relative;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Timeline Line */
+.education-container::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background: #0a3a8dcc;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+/* Each Box */
+.education-box {
+  width: 45%;
+  background: white;
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* Left & Right Positioning */
+.education-box.left {
+  margin-right: auto;
+  text-align: left;
+}
+
+.education-box.right {
+  margin-left: auto;
+  text-align: left;
+}
+
+/* Dots on the timeline */
+.education-box::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 18px;
+  height: 18px;
+  background: #0a3a8d;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 4px #0a3a8d44;
+}
+
+.education-box.left::before {
+  right: -35px;
+}
+
+.education-box.right::before {
+  left: -35px;
+}
+
+.education-box h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: #0a3a8d;
+}
+
+.education-box small {
+  font-size: 14px;
+  color: #555;
+}
+
+.education-box p {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .education-container::before {
+    left: 10px;
+  }
+
+  .education-box {
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .education-box.left,
+  .education-box.right {
+    margin: 20px 0;
+  }
+
+  .education-box.left::before,
+  .education-box.right::before {
+    left: -10px;
+  }
+}
