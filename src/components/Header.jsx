@@ -4,7 +4,7 @@ import "./header.css";
 export default function Header() {
   
   const handleResumeClick = () => {
-    const fileUrl = "/resume/Ashutosh_Singh_Resume.pdf";
+    const fileUrl = "/resume/Ashutosh.resume.pdf";
 
     // Open in new tab
     const newTab = window.open(fileUrl, "_blank");
